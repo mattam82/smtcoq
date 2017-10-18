@@ -65,7 +65,7 @@ OCAMLLIBS?=-I "."\
   -I "versions/standard"\
   -I "versions/standard/Int63"\
   -I "versions/standard/Array"\
-  -I "$(COQBIN)../plugins/micromega"
+  -I "$(COQLIB)/plugins/micromega"
 COQLIBS?=\
   -R "." SMTCoq\
   -I "."\
@@ -79,7 +79,7 @@ COQLIBS?=\
   -I "versions/standard"\
   -I "versions/standard/Int63"\
   -I "versions/standard/Array"\
-  -I "$(COQBIN)../plugins/micromega"
+  -I "$(COQLIB)/plugins/micromega"
 COQCHKLIBS?=\
   -R "." SMTCoq
 COQDOCLIBS?=\
@@ -505,8 +505,8 @@ uninstall: uninstall_me.sh
 	@echo "S versions/standard/Int63" >> .merlin
 	@echo "B versions/standard/Array" >> .merlin
 	@echo "S versions/standard/Array" >> .merlin
-	@echo "B $(COQBIN)../plugins/micromega" >> .merlin
-	@echo "S $(COQBIN)../plugins/micromega" >> .merlin
+	@echo "B $(COQLIB)/plugins/micromega" >> .merlin
+	@echo "S $(COQLIB)/plugins/micromega" >> .merlin
 
 clean::
 	rm -f $(ALLCMOFILES) $(CMIFILES) $(CMAFILES)
